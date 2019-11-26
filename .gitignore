@@ -31,8 +31,9 @@
 # Don't commit frameworks or lib files for this repo (anymore)
 #
 # OK to have these in testing project
-#*.framework
-#*.a
+*.framework
+*.xcframework
+*.a
 
 #####
 # OS X temporary files that should never be committed
