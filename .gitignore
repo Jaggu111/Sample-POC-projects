@@ -27,6 +27,47 @@
 #
 #########################
 
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+#vi/vim files
+*.swp
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+out/
+build/
+
+# Agent and Posix binaries and headers
+PosixPortCommon-Dist.zip
+Full-Shortcut.zip
+dist/
+posix-dist/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle cache
+.gradle
+
+# Local IDEA workspace
+.idea/workspace.xml
+
+# IDEA/Android Studio project files, because
+# the project can be imported from settings.gradle
+.idea
+*.iml
+
+#JaCoCo ou
+
 #####
 # Don't commit frameworks or lib files for this repo (anymore)
 #
