@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  WhereNotToCrash
+//
+//  Created by Carl a Baltrunas on 3/3/19.
+//  Copyright © 2019 AT&T CDO. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define DEBUGLOG    1
+#define myprintf(...) do { if (DEBUGLOG) { printf(__VA_ARGS__); } } while (0)
+
+
+#endif /* PrefixHeader_pch */

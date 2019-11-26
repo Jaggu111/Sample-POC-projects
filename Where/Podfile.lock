@@ -1,0 +1,31 @@
+PODS:
+  - Crashlytics (3.8.6):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.13)
+  - HockeySDK (5.0.0):
+    - HockeySDK/DefaultLib (= 5.0.0)
+  - HockeySDK-Source (5.0.0)
+  - HockeySDK/DefaultLib (5.0.0)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - HockeySDK
+  - HockeySDK-Source
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
+    - HockeySDK
+    - HockeySDK-Source
+
+SPEC CHECKSUMS:
+  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
+  Fabric: 2fb5676bc811af011a04513451f463dac6803206
+  HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
+  HockeySDK-Source: af564c43b410bb1100757b55f9ab6b58478ddaef
+
+PODFILE CHECKSUM: e239c67779596c93f09944bc54573a317c894b56
+
+COCOAPODS: 1.5.2

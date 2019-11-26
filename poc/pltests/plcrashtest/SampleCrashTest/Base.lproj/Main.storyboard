@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="valentin-antonini-502970-unsplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rcO-VG-rIV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Crash Test Dummy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VD-Yg-pb7">
+                                <rect key="frame" x="61.333333333333371" y="346.66666666666669" width="291.66666666666663" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mmr-5x-FUP">
+                                <rect key="frame" x="15" y="164.66666666666663" width="384" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3M-PS-McE">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="41"/>
+                                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Test"/>
+                                        <connections>
+                                            <action selector="testButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gRw-cB-9j1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYf-MI-SMo">
+                                        <rect key="frame" x="133" y="0.0" width="118" height="41"/>
+                                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Leave"/>
+                                        <connections>
+                                            <action selector="leaveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3V-1d-5LI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-Ks-pD8">
+                                        <rect key="frame" x="266" y="0.0" width="118" height="41"/>
+                                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Release"/>
+                                        <connections>
+                                            <action selector="releaseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZw-IN-Fi1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="83X-qz-6aD">
+                                <rect key="frame" x="50" y="255.66666666666663" width="314" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFd-RM-VnM">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="41"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-8e-vE5">
+                                        <rect key="frame" x="113" y="0.0" width="88" height="41"/>
+                                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="URL"/>
+                                        <connections>
+                                            <action selector="URLButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2QN-vQ-Slg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sco-CI-9Yj">
+                                        <rect key="frame" x="226" y="0.0" width="88" height="41"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <connections>
+                                            <action selector="indexButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Svw-9E-ke1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="83X-qz-6aD" secondAttribute="trailing" constant="50" id="25o-E0-VEc"/>
+                            <constraint firstItem="4VD-Yg-pb7" firstAttribute="centerX" secondItem="rcO-VG-rIV" secondAttribute="centerX" id="92r-s1-pO7"/>
+                            <constraint firstItem="4VD-Yg-pb7" firstAttribute="top" secondItem="83X-qz-6aD" secondAttribute="bottom" constant="50" id="AG7-Iq-Xf4"/>
+                            <constraint firstItem="rcO-VG-rIV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BFj-Ea-qng"/>
+                            <constraint firstItem="rcO-VG-rIV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ezx-2f-ius"/>
+                            <constraint firstAttribute="bottom" secondItem="rcO-VG-rIV" secondAttribute="bottom" id="QEy-Xv-t14"/>
+                            <constraint firstItem="rcO-VG-rIV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XHn-ZJ-UTT"/>
+                            <constraint firstItem="83X-qz-6aD" firstAttribute="top" secondItem="Mmr-5x-FUP" secondAttribute="bottom" constant="50" id="gwm-ig-twU"/>
+                            <constraint firstItem="4VD-Yg-pb7" firstAttribute="centerY" secondItem="rcO-VG-rIV" secondAttribute="centerY" id="jkd-km-Mie"/>
+                            <constraint firstItem="83X-qz-6aD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="oU3-C1-dIB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mmr-5x-FUP" secondAttribute="trailing" constant="15" id="qQZ-Sh-LHn"/>
+                            <constraint firstItem="Mmr-5x-FUP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="vUM-Db-oqd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.8671875" y="135.7247437774524"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="valentin-antonini-502970-unsplash.jpg" width="3456" height="5184"/>
+    </resources>
+</document>

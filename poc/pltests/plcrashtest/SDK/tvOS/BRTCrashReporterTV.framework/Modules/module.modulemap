@@ -1,0 +1,6 @@
+framework module BRTCrashReporter {
+    umbrella header "BRTCrashReporter.h"
+    
+    export *
+    module * { export * }
+}

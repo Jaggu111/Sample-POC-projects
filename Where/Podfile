@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+
+platform :ios, '10.0'
+
+target 'WhereAmI' do
+  use_frameworks!
+
+  # Pods for WhereAmI
+  pod 'HockeySDK'
+  pod 'HockeySDK-Source'
+  pod 'Fabric'
+  pod 'Crashlytics'
+
+end
