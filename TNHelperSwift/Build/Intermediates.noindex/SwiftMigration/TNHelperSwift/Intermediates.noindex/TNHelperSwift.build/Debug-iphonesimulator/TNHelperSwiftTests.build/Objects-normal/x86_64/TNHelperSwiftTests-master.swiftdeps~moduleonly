@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+options: "a12455ef357b55dd65725a15728c3eab"
+build_time: [1569803365, 610559000]
+inputs:
+  "/Users/tn0109/Documents/TNHelperSwift/TNHelperSwiftTests/TNHelperSwiftTests.swift": [1561395134, 420197248]

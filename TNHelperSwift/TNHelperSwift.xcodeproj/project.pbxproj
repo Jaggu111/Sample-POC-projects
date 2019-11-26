@@ -1,0 +1,890 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAD3CBD52341643F00536332 /* DefaultNavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBCA2341643F00536332 /* DefaultNavRouter.swift */; };
+		CAD3CBD72341643F00536332 /* TabRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBCD2341643F00536332 /* TabRouterType.swift */; };
+		CAD3CBD82341643F00536332 /* NavRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBCE2341643F00536332 /* NavRouterType.swift */; };
+		CAD3CBD92341643F00536332 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBCF2341643F00536332 /* Presentable.swift */; };
+		CAD3CBDB2341643F00536332 /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBD12341643F00536332 /* HighlightedButton.swift */; };
+		CAD3CBDC2341643F00536332 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBD22341643F00536332 /* Storyboarded.swift */; };
+		CAD3CBF22341647600536332 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBE12341647600536332 /* DeepLink.swift */; };
+		CAD3CBF72341647600536332 /* LinkingCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBE62341647600536332 /* LinkingCenter.swift */; };
+		CAD3CBFC2341647600536332 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBEC2341647600536332 /* AppCoordinator.swift */; };
+		CAD3CBFD2341647600536332 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBED2341647600536332 /* TabBarCoordinator.swift */; };
+		CAD3CBFE2341647600536332 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBEE2341647600536332 /* NavigationCoordinator.swift */; };
+		CAD3CBFF2341647600536332 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CBEF2341647600536332 /* Coordinator.swift */; };
+		CAD3CC1D2341731C00536332 /* BUYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CC1C2341731C00536332 /* BUYViewController.swift */; };
+		CAD3CC1F2341732B00536332 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CC1E2341732B00536332 /* LoginViewController.swift */; };
+		CAD3CC232341794100536332 /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3CC222341794100536332 /* BuyCoordinator.swift */; };
+		CAFE3DE422C1373D00A7BE60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3DE322C1373D00A7BE60 /* AppDelegate.swift */; };
+		CAFE3DE622C1373D00A7BE60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3DE522C1373D00A7BE60 /* ViewController.swift */; };
+		CAFE3DE922C1373D00A7BE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE3DE722C1373D00A7BE60 /* Main.storyboard */; };
+		CAFE3DEE22C1373E00A7BE60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFE3DED22C1373E00A7BE60 /* Assets.xcassets */; };
+		CAFE3DF122C1373E00A7BE60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFE3DEF22C1373E00A7BE60 /* LaunchScreen.storyboard */; };
+		CAFE3DFC22C1373E00A7BE60 /* TNHelperSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3DFB22C1373E00A7BE60 /* TNHelperSwiftTests.swift */; };
+		CAFE3E0722C1373E00A7BE60 /* TNHelperSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E0622C1373E00A7BE60 /* TNHelperSwiftUITests.swift */; };
+		CAFE3E1922C176B600A7BE60 /* UIColor+TN.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E1822C176B600A7BE60 /* UIColor+TN.swift */; };
+		CAFE3E1B22C1772C00A7BE60 /* CALayer+TN.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E1A22C1772C00A7BE60 /* CALayer+TN.swift */; };
+		CAFE3E1F22C177E300A7BE60 /* UIImageView+TN.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E1E22C177E300A7BE60 /* UIImageView+TN.swift */; };
+		CAFE3E2122C1782200A7BE60 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2022C1782200A7BE60 /* UIButton+Extension.swift */; };
+		CAFE3E2322C1786700A7BE60 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2222C1786700A7BE60 /* Date+Extension.swift */; };
+		CAFE3E2522C1789800A7BE60 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2422C1789800A7BE60 /* String+Extension.swift */; };
+		CAFE3E2722C1790000A7BE60 /* UITabBar+TN.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2622C1790000A7BE60 /* UITabBar+TN.swift */; };
+		CAFE3E2922C17A2400A7BE60 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2822C17A2400A7BE60 /* UIViewController+Extension.swift */; };
+		CAFE3E2B22C17A5000A7BE60 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2A22C17A5000A7BE60 /* UIDevice+Extension.swift */; };
+		CAFE3E2D22C17A7700A7BE60 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2C22C17A7700A7BE60 /* MKMapView+Extension.swift */; };
+		CAFE3E2F22C17AB000A7BE60 /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E2E22C17AB000A7BE60 /* UITabBarController+Extension.swift */; };
+		CAFE3E3122C17AD800A7BE60 /* Collections+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE3E3022C17AD800A7BE60 /* Collections+Extension.swift */; };
+		CAFE41D022C17C8F00A7BE60 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFE41CF22C17C8F00A7BE60 /* OpenSans-Bold.ttf */; };
+		CAFE41D322C17CA100A7BE60 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFE41D122C17CA100A7BE60 /* OpenSans-Regular.ttf */; };
+		CAFE41D422C17CA100A7BE60 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFE41D222C17CA100A7BE60 /* OpenSans-Semibold.ttf */; };
+		CAFE41D622C17CC000A7BE60 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE41D522C17CC000A7BE60 /* HelperFunctions.swift */; };
+		CAFE41D822C17CCA00A7BE60 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE41D722C17CCA00A7BE60 /* CoreDataStack.swift */; };
+		CAFE41DB22C17E1C00A7BE60 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE41DA22C17E1C00A7BE60 /* Constants.swift */; };
+		CAFE41DD22C17ED500A7BE60 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE41DC22C17ED400A7BE60 /* Spinner.swift */; };
+		CAFE41DF22C17F5400A7BE60 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE41DE22C17F5400A7BE60 /* SpinnerViewController.swift */; };
+		CAFE41E122C17FE100A7BE60 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE41E022C17FE100A7BE60 /* UIView+Extension.swift */; };
+		CAFE41E922C180CF00A7BE60 /* TNHelperSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAFE41E722C180CF00A7BE60 /* TNHelperSwift.xcdatamodeld */; };
+		CAFE45B822C18A4000A7BE60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAFE45BA22C18A4000A7BE60 /* Localizable.strings */; };
+		CAFE45BD22C18BA800A7BE60 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE45BC22C18BA700A7BE60 /* UserDefaults.swift */; };
+		CAFE45BF22C18BBB00A7BE60 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE45BE22C18BBB00A7BE60 /* CGRect.swift */; };
+		CAFE45C122C18C0F00A7BE60 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE45C022C18C0F00A7BE60 /* UIScreen.swift */; };
+		CAFE45C322C18C3200A7BE60 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE45C222C18C3200A7BE60 /* NotificationCenter.swift */; };
+		CAFE45C522C18C5E00A7BE60 /* ActivityOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE45C422C18C5E00A7BE60 /* ActivityOverlay.swift */; };
+		CAFE45C722C18C6E00A7BE60 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE45C622C18C6E00A7BE60 /* UIScrollView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAFE3DF822C1373E00A7BE60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAFE3DD822C1373D00A7BE60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAFE3DDF22C1373D00A7BE60;
+			remoteInfo = TNHelperSwift;
+		};
+		CAFE3E0322C1373E00A7BE60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAFE3DD822C1373D00A7BE60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAFE3DDF22C1373D00A7BE60;
+			remoteInfo = TNHelperSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAD3CBCA2341643F00536332 /* DefaultNavRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNavRouter.swift; sourceTree = "<group>"; };
+		CAD3CBCD2341643F00536332 /* TabRouterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabRouterType.swift; sourceTree = "<group>"; };
+		CAD3CBCE2341643F00536332 /* NavRouterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavRouterType.swift; sourceTree = "<group>"; };
+		CAD3CBCF2341643F00536332 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		CAD3CBD12341643F00536332 /* HighlightedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
+		CAD3CBD22341643F00536332 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		CAD3CBE12341647600536332 /* DeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
+		CAD3CBE62341647600536332 /* LinkingCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkingCenter.swift; sourceTree = "<group>"; };
+		CAD3CBEC2341647600536332 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CAD3CBED2341647600536332 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		CAD3CBEE2341647600536332 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		CAD3CBEF2341647600536332 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CAD3CC1C2341731C00536332 /* BUYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BUYViewController.swift; sourceTree = "<group>"; };
+		CAD3CC1E2341732B00536332 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CAD3CC222341794100536332 /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
+		CAFE3DE022C1373D00A7BE60 /* TNHelperSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNHelperSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE3DE322C1373D00A7BE60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAFE3DE522C1373D00A7BE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAFE3DE822C1373D00A7BE60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAFE3DED22C1373E00A7BE60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAFE3DF022C1373E00A7BE60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAFE3DF222C1373E00A7BE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFE3DF722C1373E00A7BE60 /* TNHelperSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNHelperSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE3DFB22C1373E00A7BE60 /* TNHelperSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNHelperSwiftTests.swift; sourceTree = "<group>"; };
+		CAFE3DFD22C1373E00A7BE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFE3E0222C1373E00A7BE60 /* TNHelperSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNHelperSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFE3E0622C1373E00A7BE60 /* TNHelperSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNHelperSwiftUITests.swift; sourceTree = "<group>"; };
+		CAFE3E0822C1373E00A7BE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFE3E1822C176B600A7BE60 /* UIColor+TN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TN.swift"; sourceTree = "<group>"; };
+		CAFE3E1A22C1772C00A7BE60 /* CALayer+TN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+TN.swift"; sourceTree = "<group>"; };
+		CAFE3E1E22C177E300A7BE60 /* UIImageView+TN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+TN.swift"; sourceTree = "<group>"; };
+		CAFE3E2022C1782200A7BE60 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		CAFE3E2222C1786700A7BE60 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CAFE3E2422C1789800A7BE60 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		CAFE3E2622C1790000A7BE60 /* UITabBar+TN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+TN.swift"; sourceTree = "<group>"; };
+		CAFE3E2822C17A2400A7BE60 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		CAFE3E2A22C17A5000A7BE60 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		CAFE3E2C22C17A7700A7BE60 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
+		CAFE3E2E22C17AB000A7BE60 /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
+		CAFE3E3022C17AD800A7BE60 /* Collections+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collections+Extension.swift"; sourceTree = "<group>"; };
+		CAFE41CF22C17C8F00A7BE60 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		CAFE41D122C17CA100A7BE60 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		CAFE41D222C17CA100A7BE60 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		CAFE41D522C17CC000A7BE60 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		CAFE41D722C17CCA00A7BE60 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		CAFE41DA22C17E1C00A7BE60 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CAFE41DC22C17ED400A7BE60 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		CAFE41DE22C17F5400A7BE60 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		CAFE41E022C17FE100A7BE60 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		CAFE41E822C180CF00A7BE60 /* Activity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Activity.xcdatamodel; sourceTree = "<group>"; };
+		CAFE45B922C18A4000A7BE60 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAFE45BB22C18A4D00A7BE60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAFE45BC22C18BA700A7BE60 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		CAFE45BE22C18BBB00A7BE60 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		CAFE45C022C18C0F00A7BE60 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		CAFE45C222C18C3200A7BE60 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		CAFE45C422C18C5E00A7BE60 /* ActivityOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityOverlay.swift; sourceTree = "<group>"; };
+		CAFE45C622C18C6E00A7BE60 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAFE3DDD22C1373D00A7BE60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE3DF422C1373E00A7BE60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE3DFF22C1373E00A7BE60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAD3CBC82341643F00536332 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3CBC92341643F00536332 /* Implementations */,
+				CAD3CBCC2341643F00536332 /* Protocols */,
+				CAD3CBDD2341647600536332 /* Coordinators */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		CAD3CBC92341643F00536332 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3CBCA2341643F00536332 /* DefaultNavRouter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		CAD3CBCC2341643F00536332 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3CBCD2341643F00536332 /* TabRouterType.swift */,
+				CAD3CBCE2341643F00536332 /* NavRouterType.swift */,
+				CAD3CBCF2341643F00536332 /* Presentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CAD3CBDD2341647600536332 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3CBDE2341647600536332 /* Implementations */,
+				CAD3CBEB2341647600536332 /* Protocols */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CAD3CBDE2341647600536332 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3CBE12341647600536332 /* DeepLink.swift */,
+				CAD3CBE62341647600536332 /* LinkingCenter.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		CAD3CBEB2341647600536332 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3CBEC2341647600536332 /* AppCoordinator.swift */,
+				CAD3CC222341794100536332 /* BuyCoordinator.swift */,
+				CAD3CBED2341647600536332 /* TabBarCoordinator.swift */,
+				CAD3CBEE2341647600536332 /* NavigationCoordinator.swift */,
+				CAD3CBEF2341647600536332 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CAFE3DD722C1373D00A7BE60 = {
+			isa = PBXGroup;
+			children = (
+				CAFE3DE222C1373D00A7BE60 /* TNHelperSwift */,
+				CAFE41CE22C17BCF00A7BE60 /* Fonts */,
+				CAFE3DFA22C1373E00A7BE60 /* TNHelperSwiftTests */,
+				CAFE3E0522C1373E00A7BE60 /* TNHelperSwiftUITests */,
+				CAFE3DE122C1373D00A7BE60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAFE3DE122C1373D00A7BE60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE3DE022C1373D00A7BE60 /* TNHelperSwift.app */,
+				CAFE3DF722C1373E00A7BE60 /* TNHelperSwiftTests.xctest */,
+				CAFE3E0222C1373E00A7BE60 /* TNHelperSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAFE3DE222C1373D00A7BE60 /* TNHelperSwift */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE41D922C17E1000A7BE60 /* Managers */,
+				CAFE3E1522C175CB00A7BE60 /* Helpers */,
+				CAFE3E1422C175A200A7BE60 /* Extensions */,
+				CAFE41CB22C17B9900A7BE60 /* SupportingFiles */,
+				CAD3CBC82341643F00536332 /* Routers */,
+				CAD3CBD22341643F00536332 /* Storyboarded.swift */,
+				CAFE3DE322C1373D00A7BE60 /* AppDelegate.swift */,
+				CAFE3DE522C1373D00A7BE60 /* ViewController.swift */,
+				CAD3CC1C2341731C00536332 /* BUYViewController.swift */,
+				CAD3CC1E2341732B00536332 /* LoginViewController.swift */,
+				CAFE3DE722C1373D00A7BE60 /* Main.storyboard */,
+				CAFE3DED22C1373E00A7BE60 /* Assets.xcassets */,
+				CAFE3DEF22C1373E00A7BE60 /* LaunchScreen.storyboard */,
+				CAFE3DF222C1373E00A7BE60 /* Info.plist */,
+				CAFE41E722C180CF00A7BE60 /* TNHelperSwift.xcdatamodeld */,
+				CAFE45BA22C18A4000A7BE60 /* Localizable.strings */,
+			);
+			path = TNHelperSwift;
+			sourceTree = "<group>";
+		};
+		CAFE3DFA22C1373E00A7BE60 /* TNHelperSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE3DFB22C1373E00A7BE60 /* TNHelperSwiftTests.swift */,
+				CAFE3DFD22C1373E00A7BE60 /* Info.plist */,
+			);
+			path = TNHelperSwiftTests;
+			sourceTree = "<group>";
+		};
+		CAFE3E0522C1373E00A7BE60 /* TNHelperSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE3E0622C1373E00A7BE60 /* TNHelperSwiftUITests.swift */,
+				CAFE3E0822C1373E00A7BE60 /* Info.plist */,
+			);
+			path = TNHelperSwiftUITests;
+			sourceTree = "<group>";
+		};
+		CAFE3E1422C175A200A7BE60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE3E1822C176B600A7BE60 /* UIColor+TN.swift */,
+				CAFE3E1A22C1772C00A7BE60 /* CALayer+TN.swift */,
+				CAFE45BE22C18BBB00A7BE60 /* CGRect.swift */,
+				CAFE3E1E22C177E300A7BE60 /* UIImageView+TN.swift */,
+				CAFE3E2022C1782200A7BE60 /* UIButton+Extension.swift */,
+				CAFE45BC22C18BA700A7BE60 /* UserDefaults.swift */,
+				CAFE41E022C17FE100A7BE60 /* UIView+Extension.swift */,
+				CAFE3E2222C1786700A7BE60 /* Date+Extension.swift */,
+				CAFE3E2422C1789800A7BE60 /* String+Extension.swift */,
+				CAFE3E2622C1790000A7BE60 /* UITabBar+TN.swift */,
+				CAFE45C022C18C0F00A7BE60 /* UIScreen.swift */,
+				CAFE3E2822C17A2400A7BE60 /* UIViewController+Extension.swift */,
+				CAFE3E2A22C17A5000A7BE60 /* UIDevice+Extension.swift */,
+				CAFE3E2C22C17A7700A7BE60 /* MKMapView+Extension.swift */,
+				CAFE3E2E22C17AB000A7BE60 /* UITabBarController+Extension.swift */,
+				CAFE3E3022C17AD800A7BE60 /* Collections+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAFE3E1522C175CB00A7BE60 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3CBD12341643F00536332 /* HighlightedButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CAFE41CB22C17B9900A7BE60 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE45C222C18C3200A7BE60 /* NotificationCenter.swift */,
+				CAFE45C422C18C5E00A7BE60 /* ActivityOverlay.swift */,
+				CAFE45C622C18C6E00A7BE60 /* UIScrollView.swift */,
+				CAFE41D522C17CC000A7BE60 /* HelperFunctions.swift */,
+				CAFE41D722C17CCA00A7BE60 /* CoreDataStack.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CAFE41CE22C17BCF00A7BE60 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE41CF22C17C8F00A7BE60 /* OpenSans-Bold.ttf */,
+				CAFE41D122C17CA100A7BE60 /* OpenSans-Regular.ttf */,
+				CAFE41D222C17CA100A7BE60 /* OpenSans-Semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CAFE41D922C17E1000A7BE60 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE41DA22C17E1C00A7BE60 /* Constants.swift */,
+				CAFE41DC22C17ED400A7BE60 /* Spinner.swift */,
+				CAFE41DE22C17F5400A7BE60 /* SpinnerViewController.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAFE3DDF22C1373D00A7BE60 /* TNHelperSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAFE3E0B22C1373E00A7BE60 /* Build configuration list for PBXNativeTarget "TNHelperSwift" */;
+			buildPhases = (
+				CAFE3DDC22C1373D00A7BE60 /* Sources */,
+				CAFE3DDD22C1373D00A7BE60 /* Frameworks */,
+				CAFE3DDE22C1373D00A7BE60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TNHelperSwift;
+			productName = TNHelperSwift;
+			productReference = CAFE3DE022C1373D00A7BE60 /* TNHelperSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAFE3DF622C1373E00A7BE60 /* TNHelperSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAFE3E0E22C1373E00A7BE60 /* Build configuration list for PBXNativeTarget "TNHelperSwiftTests" */;
+			buildPhases = (
+				CAFE3DF322C1373E00A7BE60 /* Sources */,
+				CAFE3DF422C1373E00A7BE60 /* Frameworks */,
+				CAFE3DF522C1373E00A7BE60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAFE3DF922C1373E00A7BE60 /* PBXTargetDependency */,
+			);
+			name = TNHelperSwiftTests;
+			productName = TNHelperSwiftTests;
+			productReference = CAFE3DF722C1373E00A7BE60 /* TNHelperSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CAFE3E0122C1373E00A7BE60 /* TNHelperSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAFE3E1122C1373E00A7BE60 /* Build configuration list for PBXNativeTarget "TNHelperSwiftUITests" */;
+			buildPhases = (
+				CAFE3DFE22C1373E00A7BE60 /* Sources */,
+				CAFE3DFF22C1373E00A7BE60 /* Frameworks */,
+				CAFE3E0022C1373E00A7BE60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAFE3E0422C1373E00A7BE60 /* PBXTargetDependency */,
+			);
+			name = TNHelperSwiftUITests;
+			productName = TNHelperSwiftUITests;
+			productReference = CAFE3E0222C1373E00A7BE60 /* TNHelperSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAFE3DD822C1373D00A7BE60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "ATT CDO";
+				TargetAttributes = {
+					CAFE3DDF22C1373D00A7BE60 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1100;
+					};
+					CAFE3DF622C1373E00A7BE60 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = CAFE3DDF22C1373D00A7BE60;
+					};
+					CAFE3E0122C1373E00A7BE60 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = CAFE3DDF22C1373D00A7BE60;
+					};
+				};
+			};
+			buildConfigurationList = CAFE3DDB22C1373D00A7BE60 /* Build configuration list for PBXProject "TNHelperSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = CAFE3DD722C1373D00A7BE60;
+			productRefGroup = CAFE3DE122C1373D00A7BE60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAFE3DDF22C1373D00A7BE60 /* TNHelperSwift */,
+				CAFE3DF622C1373E00A7BE60 /* TNHelperSwiftTests */,
+				CAFE3E0122C1373E00A7BE60 /* TNHelperSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAFE3DDE22C1373D00A7BE60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE41D422C17CA100A7BE60 /* OpenSans-Semibold.ttf in Resources */,
+				CAFE45B822C18A4000A7BE60 /* Localizable.strings in Resources */,
+				CAFE41D322C17CA100A7BE60 /* OpenSans-Regular.ttf in Resources */,
+				CAFE3DF122C1373E00A7BE60 /* LaunchScreen.storyboard in Resources */,
+				CAFE3DEE22C1373E00A7BE60 /* Assets.xcassets in Resources */,
+				CAFE41D022C17C8F00A7BE60 /* OpenSans-Bold.ttf in Resources */,
+				CAFE3DE922C1373D00A7BE60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE3DF522C1373E00A7BE60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE3E0022C1373E00A7BE60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAFE3DDC22C1373D00A7BE60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE41DD22C17ED500A7BE60 /* Spinner.swift in Sources */,
+				CAFE3DE622C1373D00A7BE60 /* ViewController.swift in Sources */,
+				CAD3CBFC2341647600536332 /* AppCoordinator.swift in Sources */,
+				CAD3CC1D2341731C00536332 /* BUYViewController.swift in Sources */,
+				CAFE3E2B22C17A5000A7BE60 /* UIDevice+Extension.swift in Sources */,
+				CAD3CBFD2341647600536332 /* TabBarCoordinator.swift in Sources */,
+				CAFE3E2922C17A2400A7BE60 /* UIViewController+Extension.swift in Sources */,
+				CAFE41E922C180CF00A7BE60 /* TNHelperSwift.xcdatamodeld in Sources */,
+				CAFE3E2F22C17AB000A7BE60 /* UITabBarController+Extension.swift in Sources */,
+				CAD3CBDB2341643F00536332 /* HighlightedButton.swift in Sources */,
+				CAD3CBD52341643F00536332 /* DefaultNavRouter.swift in Sources */,
+				CAD3CBD82341643F00536332 /* NavRouterType.swift in Sources */,
+				CAD3CBD72341643F00536332 /* TabRouterType.swift in Sources */,
+				CAFE3E2522C1789800A7BE60 /* String+Extension.swift in Sources */,
+				CAFE45C122C18C0F00A7BE60 /* UIScreen.swift in Sources */,
+				CAFE3E1922C176B600A7BE60 /* UIColor+TN.swift in Sources */,
+				CAFE41DF22C17F5400A7BE60 /* SpinnerViewController.swift in Sources */,
+				CAFE3E2722C1790000A7BE60 /* UITabBar+TN.swift in Sources */,
+				CAD3CBDC2341643F00536332 /* Storyboarded.swift in Sources */,
+				CAFE3E1F22C177E300A7BE60 /* UIImageView+TN.swift in Sources */,
+				CAFE3E1B22C1772C00A7BE60 /* CALayer+TN.swift in Sources */,
+				CAFE41D622C17CC000A7BE60 /* HelperFunctions.swift in Sources */,
+				CAFE3DE422C1373D00A7BE60 /* AppDelegate.swift in Sources */,
+				CAFE45BD22C18BA800A7BE60 /* UserDefaults.swift in Sources */,
+				CAFE3E2122C1782200A7BE60 /* UIButton+Extension.swift in Sources */,
+				CAD3CBFF2341647600536332 /* Coordinator.swift in Sources */,
+				CAD3CBF72341647600536332 /* LinkingCenter.swift in Sources */,
+				CAFE41D822C17CCA00A7BE60 /* CoreDataStack.swift in Sources */,
+				CAFE41E122C17FE100A7BE60 /* UIView+Extension.swift in Sources */,
+				CAFE3E2D22C17A7700A7BE60 /* MKMapView+Extension.swift in Sources */,
+				CAFE3E2322C1786700A7BE60 /* Date+Extension.swift in Sources */,
+				CAFE45C722C18C6E00A7BE60 /* UIScrollView.swift in Sources */,
+				CAD3CC1F2341732B00536332 /* LoginViewController.swift in Sources */,
+				CAFE3E3122C17AD800A7BE60 /* Collections+Extension.swift in Sources */,
+				CAD3CBD92341643F00536332 /* Presentable.swift in Sources */,
+				CAD3CBFE2341647600536332 /* NavigationCoordinator.swift in Sources */,
+				CAFE45C322C18C3200A7BE60 /* NotificationCenter.swift in Sources */,
+				CAFE45C522C18C5E00A7BE60 /* ActivityOverlay.swift in Sources */,
+				CAD3CBF22341647600536332 /* DeepLink.swift in Sources */,
+				CAD3CC232341794100536332 /* BuyCoordinator.swift in Sources */,
+				CAFE45BF22C18BBB00A7BE60 /* CGRect.swift in Sources */,
+				CAFE41DB22C17E1C00A7BE60 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE3DF322C1373E00A7BE60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE3DFC22C1373E00A7BE60 /* TNHelperSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAFE3DFE22C1373E00A7BE60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFE3E0722C1373E00A7BE60 /* TNHelperSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAFE3DF922C1373E00A7BE60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAFE3DDF22C1373D00A7BE60 /* TNHelperSwift */;
+			targetProxy = CAFE3DF822C1373E00A7BE60 /* PBXContainerItemProxy */;
+		};
+		CAFE3E0422C1373E00A7BE60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAFE3DDF22C1373D00A7BE60 /* TNHelperSwift */;
+			targetProxy = CAFE3E0322C1373E00A7BE60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAFE3DE722C1373D00A7BE60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAFE3DE822C1373D00A7BE60 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAFE3DEF22C1373E00A7BE60 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAFE3DF022C1373E00A7BE60 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CAFE45BA22C18A4000A7BE60 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAFE45B922C18A4000A7BE60 /* de */,
+				CAFE45BB22C18A4D00A7BE60 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAFE3E0922C1373E00A7BE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAFE3E0A22C1373E00A7BE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAFE3E0C22C1373E00A7BE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896W7TURJY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SupportingFiles/ParkMobile/Frameworks",
+				);
+				INFOPLIST_FILE = TNHelperSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tharuninc.TNHelperSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAFE3E0D22C1373E00A7BE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896W7TURJY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SupportingFiles/ParkMobile/Frameworks",
+				);
+				INFOPLIST_FILE = TNHelperSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tharuninc.TNHelperSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CAFE3E0F22C1373E00A7BE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896W7TURJY;
+				INFOPLIST_FILE = TNHelperSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-96W7TURJY.TNHelperSwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TNHelperSwift.app/TNHelperSwift";
+			};
+			name = Debug;
+		};
+		CAFE3E1022C1373E00A7BE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896W7TURJY;
+				INFOPLIST_FILE = TNHelperSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-96W7TURJY.TNHelperSwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TNHelperSwift.app/TNHelperSwift";
+			};
+			name = Release;
+		};
+		CAFE3E1222C1373E00A7BE60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896W7TURJY;
+				INFOPLIST_FILE = TNHelperSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-96W7TURJY.TNHelperSwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TNHelperSwift;
+			};
+			name = Debug;
+		};
+		CAFE3E1322C1373E00A7BE60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896W7TURJY;
+				INFOPLIST_FILE = TNHelperSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-96W7TURJY.TNHelperSwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TNHelperSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAFE3DDB22C1373D00A7BE60 /* Build configuration list for PBXProject "TNHelperSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE3E0922C1373E00A7BE60 /* Debug */,
+				CAFE3E0A22C1373E00A7BE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAFE3E0B22C1373E00A7BE60 /* Build configuration list for PBXNativeTarget "TNHelperSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE3E0C22C1373E00A7BE60 /* Debug */,
+				CAFE3E0D22C1373E00A7BE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAFE3E0E22C1373E00A7BE60 /* Build configuration list for PBXNativeTarget "TNHelperSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE3E0F22C1373E00A7BE60 /* Debug */,
+				CAFE3E1022C1373E00A7BE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAFE3E1122C1373E00A7BE60 /* Build configuration list for PBXNativeTarget "TNHelperSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFE3E1222C1373E00A7BE60 /* Debug */,
+				CAFE3E1322C1373E00A7BE60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CAFE41E722C180CF00A7BE60 /* TNHelperSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CAFE41E822C180CF00A7BE60 /* Activity.xcdatamodel */,
+			);
+			currentVersion = CAFE41E822C180CF00A7BE60 /* Activity.xcdatamodel */;
+			path = TNHelperSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CAFE3DD822C1373D00A7BE60 /* Project object */;
+}

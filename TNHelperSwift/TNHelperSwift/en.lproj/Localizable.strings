@@ -1,0 +1,15 @@
+
+ // Localizable.strings
+ //  TNHelperSwift
+ //
+ //  Created by Nallamothu Tharun Kumar on 6/24/19.
+ //  Copyright © 2019 ATT CDO. All rights reserved.
+ 
+
+
+//Global
+"ok" = "OK";
+"stopParkingOptionString" = "Stop Parking";
+"cancelString" = "Cancel";
+"stopParkingMessageString" = "Are you sure you want to stop this parking session?";
+

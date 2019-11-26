@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="19A471t" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AddPromoError" representedClassName=".AddPromoError" syncable="YES">
+        <attribute name="errorType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="promotion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Promotion" inverseName="addPromoError" inverseEntity="Promotion" syncable="YES"/>
+    </entity>
+    <entity name="Address" representedClassName=".Address" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkingAction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingAction" inverseName="venueAddress" inverseEntity="ParkingAction" syncable="YES"/>
+    </entity>
+    <entity name="DurationSelection" representedClassName=".DurationSelection" syncable="YES">
+        <attribute name="dayDurationSelections" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="hasDaySelections" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasHourMinuteSelections" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="hourMinuteDurationSelections" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HourMinuteSelection" inverseName="durationSelection" inverseEntity="HourMinuteSelection" syncable="YES"/>
+        <relationship name="parkInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkInfo" inverseName="durationSelection" inverseEntity="ParkInfo" syncable="YES"/>
+    </entity>
+    <entity name="GPSPoint" representedClassName=".GPSPoint" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="zoneGpsType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkingZone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingZone" inverseName="gpsPoints" inverseEntity="ParkingZone" syncable="YES"/>
+    </entity>
+    <entity name="HourMinuteSelection" representedClassName=".HourMinuteSelection" syncable="YES">
+        <attribute name="minutes" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="selectionHour" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="durationSelection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DurationSelection" inverseName="hourMinuteDurationSelections" inverseEntity="DurationSelection" syncable="YES"/>
+    </entity>
+    <entity name="LotQuote" representedClassName=".LotQuote" syncable="YES">
+        <attribute name="available" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="earlyBird" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="earlyBirdConditions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasEnoughSchedules" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasInventory" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="productStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stopAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="withinPurchaseLimits" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="pricingLines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PricingLine" inverseName="lotQuote" inverseEntity="PricingLine" syncable="YES"/>
+    </entity>
+    <entity name="ParkInfo" representedClassName=".ParkInfo" syncable="YES">
+        <attribute name="accessCodeString" attributeType="String" defaultValueString="NotAccepted" syncable="YES"/>
+        <attribute name="canMoveStopTime" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasDurationSelections" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasValidations" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isGroupParkingZone" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isParkingAllowed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPayBySpace" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isRequireSpaceValidation" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isStartDuration" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxStopTimeLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parkingNotAllowedReason" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="durationSelection" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DurationSelection" inverseName="parkInfo" inverseEntity="DurationSelection" syncable="YES"/>
+        <relationship name="maxParkingTime" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ParkingTimeInformation" inverseName="parkInfo" inverseEntity="ParkingTimeInformation" syncable="YES"/>
+        <relationship name="paymentOption" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PaymentOption" inverseName="parkInfo" inverseEntity="PaymentOption" syncable="YES"/>
+        <relationship name="promotions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Promotion" inverseName="parkInfo" inverseEntity="Promotion" syncable="YES"/>
+        <relationship name="timeBlocks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TimeBlock" inverseName="parkInfo" inverseEntity="TimeBlock" syncable="YES"/>
+    </entity>
+    <entity name="ParkingAction" representedClassName=".ParkingAction" syncable="YES">
+        <attribute name="canExtend" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canStop" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chargingCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventEndDateLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventPackageId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="eventPackageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventStartDateLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasValidations" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isCancelled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isEarlyBird" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="masterId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mustEnterBeforeLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nowLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nowUtc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paidMinutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="spaceNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startUtc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stopLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stopUtc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeZoneStandardName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venueId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="venueName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkingHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingHistory" inverseName="actions" inverseEntity="ParkingHistory" syncable="YES"/>
+        <relationship name="parkingZone" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ParkingZone" inverseName="parkingAction" inverseEntity="ParkingZone" syncable="YES"/>
+        <relationship name="priceDetail" maxCount="1" deletionRule="Cascade" destinationEntity="PriceDetail" inverseName="parkingAction" inverseEntity="PriceDetail" syncable="YES"/>
+        <relationship name="reservationIdentifier" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ReservationIdentifier" inverseName="parkingAction" inverseEntity="ReservationIdentifier" syncable="YES"/>
+        <relationship name="vehicle" maxCount="1" deletionRule="Cascade" destinationEntity="Vehicle" inverseName="parkingActions" inverseEntity="Vehicle" syncable="YES"/>
+        <relationship name="venueAddress" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Address" inverseName="parkingAction" inverseEntity="Address" syncable="YES"/>
+    </entity>
+    <entity name="ParkingHistory" representedClassName=".ParkingHistory" syncable="YES">
+        <attribute name="totalPages" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ParkingAction" inverseName="parkingHistory" inverseEntity="ParkingAction" syncable="YES"/>
+    </entity>
+    <entity name="ParkingTimeInformation" representedClassName=".ParkingTimeInformation" syncable="YES">
+        <attribute name="days" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hours" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minutes" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalMinutes" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="parkInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkInfo" inverseName="maxParkingTime" inverseEntity="ParkInfo" syncable="YES"/>
+    </entity>
+    <entity name="ParkingZone" representedClassName=".ParkingZone" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distanceMiles" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gatedTypes" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="internalZoneCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationCode" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parkInfo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="parkingActionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="restricted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="signageCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sourceAppId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="supplierId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="supplierName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="zoneClusterId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="zoneId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="gpsPoints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GPSPoint" inverseName="parkingZone" inverseEntity="GPSPoint" syncable="YES"/>
+        <relationship name="parkingAction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingAction" inverseName="parkingZone" inverseEntity="ParkingAction" syncable="YES"/>
+        <relationship name="zoneInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ZoneInfo" inverseName="parkingZone" inverseEntity="ZoneInfo" syncable="YES"/>
+        <relationship name="zoneRedemptionInstructions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ZoneRedemptionInstruction" inverseName="parkingZone" inverseEntity="ZoneRedemptionInstruction" syncable="YES"/>
+        <relationship name="zoneServices" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ZoneService" inverseName="parkingZone" inverseEntity="ZoneService" syncable="YES"/>
+    </entity>
+    <entity name="PaymentOption" representedClassName=".PaymentOption" syncable="YES">
+        <attribute name="applePayAccepted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chasePayAccepted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="creditCardTypesAccepted" optional="YES" attributeType="Transformable" customClassName=".Set&lt;String&gt;" syncable="YES"/>
+        <attribute name="masterpassStandardAccepted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="masterpassV7Accepted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="paypalAccepted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="walletAccepted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="parkInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkInfo" inverseName="paymentOption" inverseEntity="ParkInfo" syncable="YES"/>
+    </entity>
+    <entity name="PriceDetail" representedClassName=".PriceDetail" syncable="YES">
+        <attribute name="appliedDiscounts" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="billingMethodId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="billingType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="membershipTypeId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="parkingDiscount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="parkingPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="parkingVat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="serviceFee" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="serviceFeeDiscount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="showVat" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="parkingAction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingAction" inverseName="priceDetail" inverseEntity="ParkingAction" syncable="YES"/>
+    </entity>
+    <entity name="PricingLine" representedClassName=".PricingLine" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="lotQuote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LotQuote" inverseName="pricingLines" inverseEntity="LotQuote" syncable="YES"/>
+    </entity>
+    <entity name="Promotion" representedClassName=".Promotion" syncable="YES">
+        <attribute name="codeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="count" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isValidation" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="promoCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="promoTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="addPromoError" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="AddPromoError" inverseName="promotion" inverseEntity="AddPromoError" syncable="YES"/>
+        <relationship name="parkInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkInfo" inverseName="promotions" inverseEntity="ParkInfo" syncable="YES"/>
+    </entity>
+    <entity name="ReservationIdentifier" representedClassName=".ReservationIdentifier" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkingAction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingAction" inverseName="reservationIdentifier" inverseEntity="ParkingAction" syncable="YES"/>
+    </entity>
+    <entity name="TimeBlock" representedClassName=".TimeBlock" syncable="YES">
+        <attribute name="blockType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blockUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="count" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxStopTimeLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkInfo" inverseName="timeBlocks" inverseEntity="ParkInfo" syncable="YES"/>
+    </entity>
+    <entity name="Vehicle" representedClassName=".Vehicle" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isDefault" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="licensePlate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="make" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vin" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkingActions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingAction" inverseName="vehicle" inverseEntity="ParkingAction" syncable="YES"/>
+    </entity>
+    <entity name="ZoneInfo" representedClassName=".ZoneInfo" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hoursOfOperation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lotQuote" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zoneDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zoneEntranceImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkingZone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingZone" inverseName="zoneInfo" inverseEntity="ParkingZone" syncable="YES"/>
+    </entity>
+    <entity name="ZoneRedemptionInstruction" representedClassName=".ZoneRedemptionInstruction" syncable="YES">
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="parkingZone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingZone" inverseName="zoneRedemptionInstructions" inverseEntity="ParkingZone" syncable="YES"/>
+    </entity>
+    <entity name="ZoneService" representedClassName=".ZoneService" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parkingZone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParkingZone" inverseName="zoneServices" inverseEntity="ParkingZone" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AddPromoError" positionX="-9" positionY="171" width="128" height="90"/>
+        <element name="Address" positionX="-27" positionY="162" width="128" height="135"/>
+        <element name="DurationSelection" positionX="-45" positionY="135" width="128" height="120"/>
+        <element name="GPSPoint" positionX="-45" positionY="144" width="128" height="105"/>
+        <element name="HourMinuteSelection" positionX="-36" positionY="144" width="128" height="90"/>
+        <element name="LotQuote" positionX="-9" positionY="171" width="128" height="240"/>
+        <element name="ParkInfo" positionX="-36" positionY="144" width="128" height="30"/>
+        <element name="ParkingAction" positionX="-63" positionY="0" width="128" height="30"/>
+        <element name="ParkingHistory" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="ParkingTimeInformation" positionX="-27" positionY="153" width="128" height="120"/>
+        <element name="ParkingZone" positionX="-54" positionY="135" width="128" height="390"/>
+        <element name="PaymentOption" positionX="-36" positionY="144" width="128" height="30"/>
+        <element name="PriceDetail" positionX="-54" positionY="135" width="128" height="225"/>
+        <element name="PricingLine" positionX="-36" positionY="135" width="128" height="105"/>
+        <element name="Promotion" positionX="-18" positionY="162" width="128" height="165"/>
+        <element name="ReservationIdentifier" positionX="-54" positionY="135" width="128" height="75"/>
+        <element name="TimeBlock" positionX="-27" positionY="153" width="128" height="30"/>
+        <element name="Vehicle" positionX="-45" positionY="144" width="128" height="210"/>
+        <element name="ZoneInfo" positionX="-54" positionY="144" width="128" height="210"/>
+        <element name="ZoneRedemptionInstruction" positionX="-45" positionY="153" width="128" height="105"/>
+        <element name="ZoneService" positionX="-36" positionY="153" width="128" height="120"/>
+    </elements>
+</model>

@@ -1,0 +1,13 @@
+/* 
+  File.strings
+  TNHelperSwift
+
+  Created by Nallamothu Tharun Kumar on 6/24/19.
+  Copyright © 2019 ATT CDO. All rights reserved.
+*/
+
+//Global
+"ok" = "OK";
+"stopParkingOptionString" = "Stoppen Parken";
+"cancelString" = "Stornieren";
+"stopParkingMessageString" = "Möchten Sie diese Parksitzung wirklich beenden?";
